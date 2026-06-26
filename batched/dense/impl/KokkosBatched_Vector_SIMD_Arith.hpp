@@ -62,7 +62,8 @@ KOKKOS_FORCEINLINE_FUNCTION static KOKKOSKERNELS_SIMD_ARITH_RETURN_TYPE(T, l) op
   return r_val;
 }
 
-#if defined(__CUDA_ARCH__) || defined(__HIP_DEVICE_COMPILE__)
+#if (defined(KOKKOS_ENABLE_CUDA) && defined(__CUDA_ARCH__)) || \
+    (defined(KOKKOS_ENABLE_HIP) && defined(__HIP_DEVICE_COMPILE__))
 KOKKOS_FORCEINLINE_FUNCTION
 static KOKKOSKERNELS_SIMD_ARITH_RETURN_TYPE(float, 2) operator+(const Vector<SIMD<float>, 2> &a,
                                                                 const Vector<SIMD<float>, 2> &b) {
@@ -238,7 +239,8 @@ KOKKOS_FORCEINLINE_FUNCTION static KOKKOSKERNELS_SIMD_ARITH_RETURN_TYPE(T, l) op
   return r_val;
 }
 
-#if defined(__CUDA_ARCH__) || defined(__HIP_DEVICE_COMPILE__)
+#if (defined(KOKKOS_ENABLE_CUDA) && defined(__CUDA_ARCH__)) || \
+    (defined(KOKKOS_ENABLE_HIP) && defined(__HIP_DEVICE_COMPILE__))
 KOKKOS_FORCEINLINE_FUNCTION
 static KOKKOSKERNELS_SIMD_ARITH_RETURN_TYPE(float, 2) operator-(const Vector<SIMD<float>, 2> &a,
                                                                 const Vector<SIMD<float>, 2> &b) {
@@ -444,7 +446,8 @@ KOKKOS_FORCEINLINE_FUNCTION static KOKKOSKERNELS_SIMD_ARITH_RETURN_TYPE(T, l) op
   return r_val;
 }
 
-#if defined(__CUDA_ARCH__) || defined(__HIP_DEVICE_COMPILE__)
+#if (defined(KOKKOS_ENABLE_CUDA) && defined(__CUDA_ARCH__)) || \
+    (defined(KOKKOS_ENABLE_HIP) && defined(__HIP_DEVICE_COMPILE__))
 KOKKOS_FORCEINLINE_FUNCTION
 static KOKKOSKERNELS_SIMD_ARITH_RETURN_TYPE(float, 2) operator*(const Vector<SIMD<float>, 2> &a,
                                                                 const Vector<SIMD<float>, 2> &b) {
@@ -686,7 +689,8 @@ KOKKOS_FORCEINLINE_FUNCTION static KOKKOSKERNELS_SIMD_ARITH_RETURN_TYPE(T, l) op
   return r_val;
 }
 
-#if defined(__CUDA_ARCH__) || defined(__HIP_DEVICE_COMPILE__)
+#if (defined(KOKKOS_ENABLE_CUDA) && defined(__CUDA_ARCH__)) || \
+    (defined(KOKKOS_ENABLE_HIP) && defined(__HIP_DEVICE_COMPILE__))
 KOKKOS_FORCEINLINE_FUNCTION
 static KOKKOSKERNELS_SIMD_ARITH_RETURN_TYPE(float, 2) operator/(const Vector<SIMD<float>, 2> &a,
                                                                 const Vector<SIMD<float>, 2> &b) {

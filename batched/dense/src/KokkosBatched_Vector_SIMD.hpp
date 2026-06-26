@@ -103,7 +103,7 @@ class Vector<SIMD<T>, l> {
 
 }  // namespace KokkosBatched
 
-#if defined(__CUDA_ARCH__) || defined(__HIP_DEVICE_COMPILE__)
+#if (defined(KOKKOS_ENABLE_CUDA) && defined(__CUDA_ARCH__)) || (defined(KOKKOS_ENABLE_HIP) && defined(__HIP_DEVICE_COMPILE__))
 namespace KokkosBatched {
 
 template <>
